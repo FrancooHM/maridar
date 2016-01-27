@@ -1,0 +1,54 @@
+<html ng-app="myApp">
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../../bower_components/Materialize/dist/css/materialize.min.css" media="screen,projection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../stylesheets/panel-list/style.css">
+</head>
+
+<body ng-controller="panelListController">
+    <nav class="z-depth-0 amber lighten-1">
+        <div class="nav-wrapper">
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <h1 class="center-align">
+                marid.ar panel-list
+            </h1>
+        </div>
+        <form>
+            <h2 class="center-align">comidas</h2>
+            <div class="row" ng-repeat="food in foods">
+                <a class="waves-effect waves-light btn" ng-click="foodClick(food._id)">{{food.titulo}}</a>
+                <!-- Dropdown Trigger -->
+                
+                <!-- Dropdown Structure -->
+                
+                    <a ng-click="foodDel(food._id, food.titulo)">DELETE</a>
+                
+            </div>
+            <h2 class="center-align">bebidas</h2>
+            <div class="row" ng-repeat="drink in drinks">
+                <a class="waves-effect waves-light btn" ng-click="drinkClick(drink._id)">{{drink.titulo}}</a>
+                <!-- Dropdown Trigger -->
+
+                <!-- Dropdown Structure -->
+                
+                    <a ng-click="drinkDel(drink._id, drink.titulo)">DELETE</a>
+                
+            </div>
+        </form>
+        <!-- SCRIPTS -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="../../bower_components/Materialize/dist/js/materialize.min.js"></script>
+        <script src="../../bower_components/angular/angular.min.js"></script>
+        <script src="../../bower_components/angular-route/angular-route.min.js"></script>
+        <script src="../../angular/app.js"></script>
+        <script src="../../angular/controllers/panel-list/controller.js"></script>
+</body>
+
+</html>

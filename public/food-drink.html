@@ -1,0 +1,86 @@
+<html ng-app="myApp">
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../bower_components/Materialize/dist/css/materialize.min.css" media="screen,projection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/food-drink/style.css">
+</head>
+
+<body ng-controller="foodDrinkController">
+    <div class="navbar-fixed">
+        <nav class="z-depth-0 amber lighten-1">
+            <div class="nav-wrapper">
+                <a href="" class="brand-logo left">BEBIDAS</a>
+                <ul class="right">
+                    <li><a href=""><i class="material-icons">more_vert</i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="navbar-fixed">
+        <nav class="z-depth-0 amber lighten-1">
+            <div class="nav-wrapper">
+                <form>
+                    <div class="input-field">
+                        <input id="search" type="search" required ng-model="text">
+                        <label for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <!-- PARALLAX -->
+    <div class="parallax-container">
+        <div class="parallax"><img ng-src="{{mymeal.image}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="descrip-module">
+            <div class="card z-depth-0">
+                <div class="card-content">
+                    <div class="row">
+                        <div class="card-title grey-text text-darken-3">{{mymeal.titulo}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="card-subtitle grey-text text-darken-1">{{mymeal.descripcion}}
+                        </div>
+                    </div>
+                    </br>
+                    <div class="row">
+                        <a class="waves-effect waves-light amber btn">STAND {{mymeal.idproductor}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="z-depth-0 amber lighten-1">
+        <div class="">
+            <div class="brand-logo left">Para maridar con</div>
+        </div>
+    </nav>
+    <div class="row">
+        <ul class="collection">
+            <li class="collection-item avatar" ng-repeat="drink in db | filter:text:strict">
+                <img ng-src="{{drink.image}}" alt="" class="circle">
+                <span class="title">{{drink.titulo}}</span>
+                <p>{{drink.descripcion}}
+                </p>
+                <p><a ng-href="../picked/{{mymeal._id}}/{{drink._id}}" target="_self">Seleccionar</a></p>
+            </li>
+        </ul>
+    </div>
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../bower_components/Materialize/dist/js/materialize.min.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-route/angular-route.min.js"></script>
+    <script src="../angular/app.js"></script>
+    <script src="../angular/controllers/food-drink/controller.js"></script>
+</body>
+
+</html>

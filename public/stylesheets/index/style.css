@@ -1,0 +1,41 @@
+html,
+body {
+    color: white;
+    background-color: #ffca28;
+}
+
+.brand-logo {
+    margin-left: 0.5em;
+}
+
+.tag {
+    color: white;
+    text-align: center;
+    background-color: #FFCA28;
+    border-radius: 2px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.sq-button {
+    padding: 12px;
+    background-color: white;
+    height: 140px;
+    width: 140px;
+    border-radius: 2px;
+    margin: 0 auto;
+}
+
+.subtitle{
+    color:#ABABAB;
+}
+img {
+    height: 80px;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    i {
+        margin-top: .4em;
+    }
+}

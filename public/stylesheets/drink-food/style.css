@@ -1,0 +1,27 @@
+@media (max-width: 600px) {
+    i {
+        margin-top: .4em;
+    }
+}
+
+.brand-logo{
+    margin-left: 0.5em;
+}
+
+.tag {
+    color: white;
+    text-align: center;
+    background-color: #FFCA28;
+    border-radius: 2px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.descrip-module{
+    height: 200px;
+    background-color: white;
+}
+
+.parallax-container {
+    height: 12em;
+}

@@ -1,0 +1,8 @@
+[
+//////////////////////////////////////////////////////
+////    BEBIDAS
+//////////////////////////////////////////////////////
+{"Cerveza Barley Wine":["Alcohol","Amargo","Dulce"]},
+{"Cerveza Indian Pale Ale":["Alcohol","Amargo"]},
+{"Cerveza Stout":["Dulce"]}
+];

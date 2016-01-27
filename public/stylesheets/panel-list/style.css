@@ -1,0 +1,16 @@
+html,
+body {
+    color: #26a69a;
+    background-color: #ffca28;
+}
+
+.btn {
+    width: 80%;
+    margin-right: 15px;
+}
+
+@media (max-width: 600px) {
+    i {
+        margin-top: .4em;
+    }
+}
